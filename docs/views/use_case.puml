@@ -1,0 +1,5 @@
+@startuml
+    Vendeur.euse  --> (Gérer les utilisateurs)
+    Directeur.trice  --> (Gérer les utilisateurs)
+    Utilisateur.trice  --> (Démander la suppression de son utilisateur)
+@enduml

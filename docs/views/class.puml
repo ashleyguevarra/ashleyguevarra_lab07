@@ -1,0 +1,38 @@
+@startuml
+    class UserEventConsumer {
+        + start() : void
+        + stop() : void
+        - _process_message(dict) : void
+    }
+
+    class KafkaConsumer {
+
+    }
+
+    class HandlerRegistry {
+        + register(EventHandler) : void
+        + get_handler(str) : EventHandler
+        + has_handler(str) : boolean
+        + get_supported_events() : list
+    }
+
+    class EventHandler {
+        + get_event_type() : str
+        + handle(dict) : void
+    }    
+
+    class UserCreatedHandler {
+
+    }    
+
+    class UserDeletedHandler {
+
+    }
+
+    UserEventConsumer --> KafkaConsumer
+    KafkaConsumer --> HandlerRegistry
+    HandlerRegistry --> EventHandler
+    EventHandler <|-- UserCreatedHandler
+    EventHandler <|-- UserDeletedHandler
+
+@enduml

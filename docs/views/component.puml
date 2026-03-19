@@ -1,0 +1,26 @@
+@startuml
+
+package StoreManager {
+    [UserEventProducer] 
+}
+
+package Coolriel {
+    [coolriel.py] 
+}
+
+package Consumer {
+    [UserEventConsumer] 
+}
+
+package Handlers {
+    [HandlerRegistry] 
+    [Handler] 
+}
+
+[UserEventProducer] --> [coolriel.py] 
+[coolriel.py] --> [UserEventConsumer]
+[coolriel.py] <-- [HandlerRegistry]
+[UserEventConsumer] --> [HandlerRegistry] 
+[HandlerRegistry] --> [Handler] 
+
+@enduml

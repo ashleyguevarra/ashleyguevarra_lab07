@@ -1,0 +1,10 @@
+@startuml
+    start
+        :Ajouter/supprimer un utilisateur;
+        if (L'utilisateur est un client) then (oui)     
+            :Envoyer un courriel avec des informations pertinentes au client;
+        elseif (L'utilisateur est un employé) then (oui)     
+            :Envoyer un courriel avec des informations pertinentes au employé;
+        endif
+    stop
+@enduml
