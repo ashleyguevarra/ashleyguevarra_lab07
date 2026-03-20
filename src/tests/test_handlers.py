@@ -15,6 +15,7 @@ def test_user_created_handler():
         "id": 998,
         "name": 'Joanne Test',
         "email": 'joannetest@example.com',
+        "user_type_id": 1,
         "datetime": str(datetime.now())
     }
     user_creation.handle(mock_event)
@@ -27,8 +28,9 @@ def test_user_deleted_handler():
         "id": 999,
         "name": 'Joe Test',
         "email": 'joetest@example.com',
+        "user_type_id": 1,
         "datetime": str(datetime.now())
     }
     user_deletion.handle(mock_event)
-    file_exists = exists("output/welcome_999.html")
+    file_exists = exists("output/goodbye_999.html")
     assert file_exists == True

@@ -7,6 +7,9 @@ services:
       - "9092:9092"
       - "9101:9101"
     environment:
+      KAFKA_LOG_RETENTION_HOURS: 168
+      KAFKA_LOG_RETENTION_BYTES: 1073741824
+      KAFKA_LOG_SEGMENT_BYTES: 214748364
       CLUSTER_ID: "o0oqgfJkSRKy30HkVsAjBg"
       KAFKA_NODE_ID: 1
       KAFKA_PROCESS_ROLES: "broker,controller"
