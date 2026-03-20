@@ -49,8 +49,6 @@ MONTRÉAL, LE 19 MARS 2026
 - [Question 5](#question-5)
 - [Question 6](#question-6)
 
-Les captures pour les questions 1 à 4 sont dans le dossier `Images/` du dépôt Coolriel.
-
 <div style="page-break-before: always;"></div>
 
 <div style="text-align: justify;">
